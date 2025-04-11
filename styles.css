@@ -1,0 +1,17 @@
+#container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column; /*places everything in a column (in this case, rows stack on top of each other like a column of books)*/
+}
+
+.row {
+    display: flex;
+    flex: 1; /*everything stretches with them all at 1 relative (shorthand for flex grow, shrink, and basis)*/
+}
+
+.cell {
+    border: 1px dotted black;
+    flex: 1;
+}
