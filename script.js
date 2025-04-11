@@ -4,6 +4,9 @@ function setupGrid(sideLength)
     // Fetch the grid container
     const container = document.querySelector("#container");
 
+    // Clear the grid before making a new one
+    container.innerHTML = '';
+
     // Fill the grid with divs
     for(let r = 0; r < sideLength; r++)
     {
@@ -25,7 +28,10 @@ function setupGrid(sideLength)
     }
 }
 
-
+const resizeButton = document.querySelector("#resizeButton");
+resizeButton.addEventListener("click", () => {
+    setupGrid(16);
+});
 
 // Start with a default 16 x 16 grid
 setupGrid(16);
