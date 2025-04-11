@@ -30,7 +30,9 @@ function setupGrid(sideLength)
 
 const resizeButton = document.querySelector("#resizeButton");
 resizeButton.addEventListener("click", () => {
-    setupGrid(16);
+    let newSize = prompt("Enter the new side length, between 0-100", 16);
+    // Error Checking
+    setupGrid(newSize);
 });
 
 // Start with a default 16 x 16 grid
